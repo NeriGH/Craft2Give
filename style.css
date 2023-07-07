@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "VT323", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background: #333;
+  overflow-x: hidden;
+}
+
+.sectionHero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/images/background-hero.jpg");
+}
+
+.sectionHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.heroLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.heroLogo img {
+  width: 80rem; /* 800px */
+  animation: breathing 3s infinite ease-in-out;
+}
+
+/* LOGO BREATHING EFFECT */
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.introductionBox {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 3.6rem; /* 36px */
+}
+
+.iconBox {
+  display: flex;
+  justify-content: space-around;
+  width: 25rem; /* 250px */
+  margin-bottom: 2.1rem; /* 21px */
+}
+
+.iconURL:link,
+.iconURL:visited {
+  font-size: 5.4rem; /* 54px */
+  transition: all ease 0.3s;
+  color: #ddd;
+}
+
+.iconURL:hover,
+.iconURL:active {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
+  color: #eee;
+}
+
+.textBox {
+  width: 100rem; /* 1000px */
+  text-align: center;
+}
+
+.introductionText {
+  font-size: 4.2rem; /* 42px */
+  color: #ddd;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  .heroLogo img {
+    width: 35rem; /* 400px */
+  }
+
+  .introductionText {
+    font-size: 1.2rem; /* 32px */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .heroLogo img {
+    width: 46rem; /* 560px */
+  }
+
+  .introductionText {
+    font-size: 1.8rem; /* 36px */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 720px) {
+  .heroLogo img {
+    width: 52rem; /* 640px */
+  }
+
+  .introductionText {
+    font-size: 2.2rem; /* 40px */
+  }
+}
+
+@media (min-width: 721px) and (max-width: 750px) {
+  .heroLogo img {
+    width: 67.5rem; /* 675px */
+  }
+
+  .introductionText {
+    font-size: 2.8rem; /* 42px */
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1080px) {
+  .heroLogo img {
+    width: 67.5rem; /* 675px */
+  }
+
+  .introductionText {
+    font-size: 2.8rem; /* 48px */
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1920px) {
+  .heroLogo img {
+    width: 100rem; /* 1000px */
+  }
+
+  .introductionText {
+    font-size: 5.4rem; /* 54px */
+  }
+}
+
+.teamHeader {
+  background: #5e5e5e;
+  text-align: center;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 1.2rem;
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: #5e5e5e;
+}
+
+.teamMember {
+  margin-top: 1rem;
+  min-height: 10rem;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.imgMember {
+  max-height: 10rem;
+  max-width: 10rem;
+  width: auto;
+}
+
+@keyframes rgbAnimation {
+  0% {
+    color: rgb(255, 2, 2); /* Red */
+  }
+  25% {
+    color: rgb(255, 0, 234); /* Green */
+  }
+  50% {
+    color: rgb(255, 255, 0); /* Blue */
+  }
+  75% {
+    color: rgb(0, 255, 0); /* Green */
+  }
+  100% {
+    color: rgb(255, 0, 0); /* Red */
+  }
+}
+
+.nameMember {
+  animation: rgbAnimation 3s infinite;
+  font-size: 2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 720px) {
+  .teamMember {
+    margin-bottom: 1rem;
+  }
+
+  .imgMember {
+    max-height: 8rem;
+    max-width: 8rem;
+  }
+
+  .nameMember {
+    font-size: 1.6rem;
+  }
+}
+
+.HIWheader {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 6.4rem;
+  margin-bottom: 2rem;
+}
+
+.HIWContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.HIWCard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.HIWimg {
+  max-height: 15rem;
+  width: auto;
+}
+
+.HIWtext {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .HIWContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .HIWCard {
+    margin-bottom: 1rem;
+  }
+
+  .HIWimg {
+    max-height: 10rem;
+  }
+
+  .HIWtext {
+    font-size: 2rem;
+  }
+}
+
+.rulesHeader {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 6.4rem;
+  margin-bottom: 2rem;
+}
+
+.rulesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.arrowButton {
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bookImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .rulesContainer {
+    /* flex-direction: column; */
+  }
+
+  .arrowContainer {
+    margin-left: 30rem 0;
+  }
+}
+
+.ruleStream {
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+  font-size: 6.4rem;
+}
+
+#sectionTwitch {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#twitch-embed {
+  display: flex;
+  justify-content: center;
+}
+
+.twitchContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  .twitchContainer {
+    margin: 0 2rem;
+  }
+
+  .twitchContainer iframe {
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .twitchContainer {
+    margin: 0;
+    margin: 0 2rem;
+  }
+
+  .twitchContainer iframe {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 720px) {
+  .twitchContainer {
+    margin: 0 2rem;
+  }
+
+  .twitchContainer iframe {
+    max-width: 100%;
+    max-height: 400px;
+  }
+}

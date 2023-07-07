@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craft2Give</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section id="sectionHero" class="sectionHero">
+        <div class="heroBackground"></div>
+        <div class="heroLogo">
+          <img src="assets/images/logo_craft2give.png" alt="Logo" />
+        </div>
+        <div class="introductionBox">
+          <div class="iconBox">
+            <a class="iconURL" href="https://www.twitch.tv">
+              <ion-icon class="icons" name="logo-twitch"></ion-icon>
+            </a>
+            <a class="iconURL" href="https://twitter.com">
+              <ion-icon class="icons" name="logo-twitter"></ion-icon>
+            </a>
+          </div>
+          <div class="textBox">
+            <p class="introductionText">
+              Un projet qui peut sauver des vies grâce à votre générosité.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="sectionTeam">
+        <h2 class="teamHeader">L'équipe</h2>
+        <div class="teamContainer">
+          <div class="teamMember">
+            <img class="imgMember" src="assets/images/1.png" alt="" />
+            <h1 class="nameMember">LawXIV</h1>
+          </div>
+          <div class="teamMember">
+            <img class="imgMember" src="assets/images/2.png" alt="" />
+            <h1 class="nameMember">TzRPheonix</h1>
+          </div>
+          <div class="teamMember">
+            <img class="imgMember" src="assets/images/3.png" alt="" />
+            <h1 class="nameMember">DrX3N0</h1>
+          </div>
+          <div class="teamMember">
+            <img class="imgMember" src="assets/images/4.png" alt="" />
+            <h1 class="nameMember">LumyaZun</h1>
+          </div>
+        </div>
+      </section>
+
+      <section id="sectionHIW">
+        <h2 class="HIWheader">Le concept</h2>
+        <div class="HIWContainer">
+          <div class="HIWCard">
+            <img src="assets/images/mnc.png" class="HIWimg" alt="" />
+            <p class="HIWtext">Un speedrun caritatif minecraft !</p>
+          </div>
+          <div class="HIWCard">
+            <img src="assets/images/twitch_logo.png" class="HIWimg" alt="" />
+            <p class="HIWtext">Intéraction in-game grâce à vos dons !</p>
+          </div>
+          <div class="HIWCard">
+            <img
+              src="assets/images/Animals_preview.png"
+              class="HIWimg"
+              alt=""
+            />
+            <p class="HIWtext">Pour nos amis les animaux !</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sectionRules">
+        <h2 class="rulesHeader">Les Règles</h2>
+        <div class="rulesContainer">
+          <div class="arrowContainer">
+            <button class="arrowButton prevButton">&lt;</button>
+          </div>
+          <div class="bookContainer">
+            <img class="bookImage" src="assets/images/book1.jpg" alt="Book 1" />
+          </div>
+          <div class="arrowContainer">
+            <button class="arrowButton nextButton">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="ruleStream">LIVESTREAM</h2>
+      <section id="sectionTwitch">
+        <div class="twitchContainer">
+          <div id="twitch-embed">
+            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+            <script>
+              new Twitch.Embed("twitch-embed", {
+                channel: "lawxiv",
+                layout: "video",
+                height: 480,
+                width: 854,
+                autoplay: false,
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
